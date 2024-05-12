@@ -1,7 +1,11 @@
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 import random
+
 
 firefox_profile = webdriver.FirefoxProfile()
 driver = webdriver.Firefox()
@@ -22,19 +26,6 @@ print(date)
 b = driver.find_element(By.XPATH,date)
 b.click()
 sleep(5)
-
-
-
-
---------------------------------------------------------------------
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from time import sleep
-import random
-
 
 # def wait_until_page_successfully_laoded():
 #     for i in range(10):
