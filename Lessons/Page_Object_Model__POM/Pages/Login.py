@@ -9,9 +9,6 @@ from Page_Object_Model__POM.Locators import username_textbox_id, password_textbo
 
 class Login:
     def __int__(self, driver):
-        # from selenium import webdriver
-        # from selenium.webdriver.common.keys import Keys
-        # driver = webdriver.Chrome()
         self.driver = driver
 
     def enter_username(self, username):

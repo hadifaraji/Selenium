@@ -1,6 +1,6 @@
 # مرحله دوم
 # برای هر صفحه یک کلاس مجزا ایجاد می کنیم و تست کیس ها یا تست متدها در این کلاس قرار میگیرند که در اینجا صفحه لاگین میشه
-# class B     TestCase or TestMethod
+# class B     senarois or TestMethod
 
 from Page_Object_Model__POM.Pages.Login import Login
 from selenium import webdriver
