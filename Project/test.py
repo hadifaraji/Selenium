@@ -1,6 +1,3 @@
-# from selenium import webdriver
-# from time import sleep
-
 from selenium import webdriver
 from time import sleep
 import random
@@ -16,11 +13,11 @@ driver.find_element('xpath', "//*[@name='pass']").send_keys('Aa123456')
 sleep(0.5)
 driver.find_element('xpath', "//*[text()='ورود' and @type='primary']").click()
 sleep(0.5)
-driver.find_element('xpath', "//*[text()='ویزا' and @class='nav_navButtonRight__WIalm ' ]").click()
+driver.find_element('xpath', "//*[text()='ویزا']").click()
 sleep(5)
 driver.find_element('xpath' , "//*[text()='ویزا توریستی']").click()
 sleep(5)
-x = driver.find_elements('xpath', "//*[@class='itinerary-list_itineraryList__5CLVr']")
-y = random.choice(x)
-y.click()
-sleep(20)
+driver.execute_script('window.scrollTo(0,100)')
+sleep(4)
+x = driver.find_elements('xpath', "//*[@class='itinerary-list_itineraryList__5CLVr']")[0].click()
+sleep(5)
