@@ -1,3 +1,10 @@
 selenium
 webdriver-manager
 selenium-wire
+
+extensions for find element :
+Ruto – Xpath Finder
+ChroPath
+
+activate virtualenv :
+.\.venv\Scripts\activate
