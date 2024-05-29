@@ -512,7 +512,7 @@ sleep(3)
 
 # ------------------------------------------------------------------------------------------------------------------
 # css selectors
-# syntax css selectors  -->  tag [ AttributeName = 'AttributeValue' ] = input [ id = 'fname' ] or * [ id = 'fname' ]
+# syntax css selectors  -->  tag [ AttributeName = 'AttributeValue' ] => input [ id = 'fname' ] or * [ id = 'fname' ]
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
