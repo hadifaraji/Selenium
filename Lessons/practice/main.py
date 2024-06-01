@@ -308,6 +308,7 @@ driver.get('https://www.yahoo.com/')
 # / descendant-or-self :: xpath-child
 
 # / following  :: xpath
+# از یه المنت به بعدش رو بگرد
 # // select [ @id = 'option' ] / following :: * [ @value = 'option 1' ]
 
 # / following-sibling :: xpath
