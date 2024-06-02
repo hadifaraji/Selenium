@@ -24,24 +24,18 @@ click_on_approve = driver.find_element(by=By.XPATH, value='//*[text()="تائی�
 sleep(2)
 click_on_search = driver.find_element(By.XPATH, '//*[text()="جستجو"]').click()
 sleep(10)
-for i in range(2):
+for i in range(10):
     no_result = driver.find_element(By.XPATH,"//*[@class='text-primary-black fw-bold tw-mb-6 text-center  fs-4 ']").get_attribute('class')
     if no_result == 'text-primary-black fw-bold tw-mb-6 text-center  fs-4 ':
         change_search = driver.find_element(By.XPATH, "//*[text()='تغییر جستجو']").click()
         sleep(2)
-        departure_date = driver.find_element(by=By.XPATH, value='//*[text()="تاریخ رفت"]').click()
-        sleep(2)
-        driver.find_element(By.XPATH, "//*[text()='15']").click()
-        click_on_approve = driver.find_element(by=By.XPATH, value='//*[text()="تائید"]').click()
-        sleep(2)
-        click_on_search = driver.find_element(By.XPATH, '//*[text()="جستجو"]').click()
-        sleep(20)
+        for i in range(2):
+            departure_date = driver.find_element(by=By.XPATH, value='//*[text()="تاریخ رفت"]').click()
+            sleep(2)
+            driver.find_element(By.XPATH, "//*[text()='15']").click()
+            click_on_approve = driver.find_element(by=By.XPATH, value='//*[text()="تائید"]').click()
+            sleep(2)
+            click_on_search = driver.find_element(By.XPATH, '//*[text()="جستجو"]').click()
+            sleep(20)
     else:
-        departure_date = driver.find_element(by=By.XPATH, value='//*[text()="تاریخ رفت"]').click()
-        sleep(2)
-        driver.find_element(By.XPATH, "//*[text()='17']").click()
-        click_on_approve = driver.find_element(by=By.XPATH, value='//*[text()="تائید"]').click()
-        sleep(2)
-        click_on_search = driver.find_element(By.XPATH, '//*[text()="جستجو"]').click()
-        sleep(20)
         i += 1

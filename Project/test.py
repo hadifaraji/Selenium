@@ -25,54 +25,27 @@ click_on_approve = driver.find_element(by=By.XPATH, value='//*[text()="تائی�
 sleep(2)
 click_on_search = driver.find_element(By.XPATH, '//*[text()="جستجو"]').click()
 sleep(10)
-for i in range(5):
+for i in range(2):
     no_result = driver.find_element(By.XPATH, "//*[@class='text-primary-black fw-bold tw-mb-6 text-center  fs-4 ']").get_attribute('class')
     if no_result == 'text-primary-black fw-bold tw-mb-6 text-center  fs-4 ':
         try:
             change_search = driver.find_element(By.XPATH, "//*[text()='تغییر جستجو']").click()
             sleep(2)
-            # date_of_login -----------------------------------------------------------------------------------------------
             departure_date = driver.find_element(by=By.XPATH, value='//*[text()="تاریخ رفت"]').click()
             sleep(2)
-            date_list_of_day = driver.find_elements(by=By.XPATH, value='//*[@class="day_day__G5CoD"]')
-            print(len(date_list_of_day))
-            count_of_date = len(date_list_of_day)
-            enable_day = []
-            for i in range(count_of_date):
-                if date_list_of_day[i].is_enabled():
-                    enable_day.append(date_list_of_day[i])
-                else:
-                    None
-            chiose_random = random.choice(enable_day)
-            chiose_random.click()
-            sleep(6)
+            driver.find_element(By.XPATH, "//*[text()='15']").click()
             click_on_approve = driver.find_element(by=By.XPATH, value='//*[text()="تائید"]').click()
             sleep(2)
-            # date_of_login --------------------------------------------------------------------------------------------------
-
             click_on_search = driver.find_element(By.XPATH, '//*[text()="جستجو"]').click()
-            sleep(10)
+            sleep(20)
         except:
-            # date_of_login -----------------------------------------------------------------------------------------------
             departure_date = driver.find_element(by=By.XPATH, value='//*[text()="تاریخ رفت"]').click()
             sleep(2)
-            date_list_of_day = driver.find_elements(by=By.XPATH, value='//*[@class="day_day__G5CoD"]')
-            print(len(date_list_of_day))
-            count_of_date = len(date_list_of_day)
-            enable_day = []
-            for i in range(count_of_date):
-                if date_list_of_day[i].is_enabled():
-                    enable_day.append(date_list_of_day[i])
-                else:
-                    None
-            chiose_random = random.choice(enable_day)
-            chiose_random.click()
-            sleep(6)
+            driver.find_element(By.XPATH, "//*[text()='17']").click()
             click_on_approve = driver.find_element(by=By.XPATH, value='//*[text()="تائید"]').click()
             sleep(2)
-            # date_of_login --------------------------------------------------------------------------------------------------
-
             click_on_search = driver.find_element(By.XPATH, '//*[text()="جستجو"]').click()
-            sleep(10)
+            sleep(20)
     else:
         i += 1
+raise Exception('page no result')
