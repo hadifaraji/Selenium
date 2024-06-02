@@ -47,4 +47,5 @@ for i in range(2):
             click_on_search = driver.find_element(By.XPATH, '//*[text()="جستجو"]').click()
             sleep(20)
     i += 1
-
+driver.find_element(By.XPATH, "//*[text()='جزئیات و خرید']").click()
+sleep(5)
