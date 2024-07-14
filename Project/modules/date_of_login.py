@@ -19,6 +19,6 @@ class Date:
                 None
         chiose_random = random.choice(enable_day)
         chiose_random.click()
-        sleep(6)
+        sleep(8)
         click_on_approve = self.driver.find_element(by=By.XPATH, value='//*[text()="تائید"]').click()
         sleep(2)

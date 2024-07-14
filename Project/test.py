@@ -20,7 +20,7 @@ sleep(1)
 driver.find_element(By.XPATH, "//*[text()='شیراز']").click()
 departure_date = driver.find_element(by=By.XPATH, value='//*[text()="تاریخ رفت"]').click()
 sleep(1)
-driver.find_element(By.XPATH, "//*[text()='14']").click()
+driver.find_element(By.XPATH, "//*[text()='17']").click()
 click_on_approve = driver.find_element(by=By.XPATH, value='//*[text()="تائید"]').click()
 sleep(2)
 click_on_search = driver.find_element(By.XPATH, '//*[text()="جستجو"]').click()
@@ -47,5 +47,6 @@ for i in range(2):
             click_on_search = driver.find_element(By.XPATH, '//*[text()="جستجو"]').click()
             sleep(20)
     i += 1
+    break
 driver.find_element(By.XPATH, "//*[text()='جزئیات و خرید']").click()
 sleep(5)
